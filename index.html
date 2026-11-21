@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>COMZ Multimedia | Digital Excellence</title>
+<title>COMZ Multimedia | Creative Digital Agency</title>
+<meta name="description" content="COMZ Multimedia provides graphic design, video editing, web development and digital solutions.">
 
 <style>
 * {
@@ -29,14 +30,14 @@ body {
 
 header {
     background: #101010;
-    padding: 18px 7%;
+    padding: 18px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #333;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid #333;
 }
 
 .logo {
@@ -47,13 +48,12 @@ header {
 
 nav {
     display: flex;
-    gap: 22px;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
 }
 
 nav a:hover {
@@ -63,20 +63,20 @@ nav a:hover {
 .menu-btn {
     display: none;
     background: none;
-    border: none;
     color: var(--gold);
-    font-size: 28px;
+    border: none;
+    font-size: 27px;
 }
 
 .hero {
     min-height: 85vh;
-    padding: 60px 20px;
+    padding: 70px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: radial-gradient(circle, #30240a, #080808 70%);
+    background: radial-gradient(circle, #30240a, #080808 75%);
 }
 
 .hero h1 {
@@ -86,45 +86,44 @@ nav a:hover {
 }
 
 .hero h3 {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
 .hero p {
     max-width: 650px;
     color: #ccc;
-    font-size: 17px;
 }
 
 .buttons {
     display: flex;
-    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
 }
 
 .btn {
     display: inline-block;
-    padding: 14px 25px;
+    padding: 13px 25px;
     margin-top: 25px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
     transition: .3s;
-}
-
-.gold-btn {
-    background: var(--gold);
-    color: black;
-}
-
-.outline-btn {
-    border: 1px solid var(--gold);
-    color: var(--gold);
 }
 
 .btn:hover {
     transform: translateY(-4px);
+}
+
+.gold {
+    background: var(--gold);
+    color: black;
+}
+
+.outline {
+    border: 1px solid var(--gold);
+    color: var(--gold);
 }
 
 section {
@@ -144,33 +143,104 @@ section {
     color: #ccc;
 }
 
-.services, .projects {
+.services, .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 22px;
 }
 
 .card {
     background: var(--card);
     border: 1px solid #333;
-    padding: 30px 20px;
     border-radius: 10px;
+    overflow: hidden;
     transition: .3s;
 }
 
 .card:hover {
     border-color: var(--gold);
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
-.card h3 {
+.service-content {
+    padding: 25px;
+}
+
+.service-content h3 {
     color: var(--gold);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.card p {
+.service-content p {
+    color: #bbb;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: #171717;
+    color: white;
+    border: 1px solid #555;
+    padding: 11px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--gold);
+    color: black;
+    border-color: var(--gold);
+}
+
+.project-card {
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    background: #222;
+}
+
+.project-card video {
+    width: 100%;
+    height: 260px;
+    background: #000;
+    object-fit: contain;
+}
+
+.project-info {
+    padding: 18px;
+}
+
+.project-info h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.project-info p {
     color: #bbb;
     font-size: 14px;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--gold);
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .contact {
@@ -178,37 +248,33 @@ section {
 }
 
 .contact p {
-    color: #ccc;
     margin: 10px;
+    color: #ccc;
 }
 
 footer {
+    background: #050505;
     padding: 25px;
     text-align: center;
-    background: #050505;
     color: #999;
 }
 
-/* Floating WhatsApp */
-
-.whatsapp-float {
+.whatsapp {
     position: fixed;
-    bottom: 22px;
-    right: 20px;
-    background: #25D366;
+    bottom: 20px;
+    right: 18px;
+    z-index: 999;
+    background: #25d366;
     color: white;
-    padding: 14px 19px;
+    padding: 14px 20px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    z-index: 999;
-    box-shadow: 0 4px 15px #000;
 }
 
 @media(max-width: 700px) {
-
     header {
-        padding: 18px 5%;
+        padding: 16px 5%;
     }
 
     .menu-btn {
@@ -218,14 +284,13 @@ footer {
     nav {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 65px;
         left: 0;
         width: 100%;
         background: #111;
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        gap: 20px;
     }
 
     nav.active {
@@ -233,7 +298,7 @@ footer {
     }
 
     section {
-        padding: 55px 6%;
+        padding: 55px 5%;
     }
 }
 </style>
@@ -242,29 +307,22 @@ footer {
 <body>
 
 <header>
-
     <div class="logo">COMZ MULTIMEDIA</div>
 
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <nav id="navigation">
+    <nav id="nav">
         <a href="#home" onclick="closeMenu()">Home</a>
         <a href="#about" onclick="closeMenu()">About</a>
         <a href="#services" onclick="closeMenu()">Services</a>
-        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
         <a href="#contact" onclick="closeMenu()">Contact</a>
     </nav>
-
 </header>
 
-<main>
-
 <section class="hero" id="home">
-
     <h3>CITIZENS OF MOUNT ZION</h3>
-
     <h1>COMZ MULTIMEDIA</h1>
-
     <h3>CREATIVITY. INNOVATION. DIGITAL EXCELLENCE.</h3>
 
     <p>
@@ -274,154 +332,232 @@ footer {
     </p>
 
     <div class="buttons">
-
-        <a class="btn gold-btn"
-        href="https://wa.me/265884388803?text=Hello%20COMZ%20Multimedia!%20I%20would%20like%20to%20make%20an%20inquiry.">
-        Chat With Us
+        <a class="btn gold"
+        href="https://wa.me/265884388803">
+            Chat With Us
         </a>
 
-        <a class="btn outline-btn"
-        href="https://wa.me/265884388803?text=Hello%20COMZ%20Multimedia!%20I%20would%20like%20to%20request%20a%20free%20quotation%20for%20your%20services.">
-        Get a Free Quote
+        <a class="btn outline"
+        href="https://wa.me/265884388803?text=Hello%20COMZ%20Multimedia%2C%20I%20would%20like%20a%20free%20quotation.">
+            Get a Free Quote
         </a>
-
     </div>
-
 </section>
 
 <section id="about">
-
     <h2 class="title">About Us</h2>
 
     <p class="about-text">
-        COMZ Multimedia (Citizens of Mount Zion) is a creative
-        multimedia organization dedicated to providing innovative
-        digital solutions.
+        COMZ Multimedia (Citizens of Mount Zion) is a
+        creative multimedia organization dedicated to
+        providing innovative digital solutions.
 
         We combine creativity, technology and professionalism
         to help individuals, businesses and organizations
         establish a powerful digital presence.
     </p>
-
 </section>
 
 <section id="services">
-
     <h2 class="title">Our Services</h2>
 
     <div class="services">
 
-        <div class="card">
+        <div class="card service-content">
             <h3>🎨 Graphic Design</h3>
-            <p>Professional logos, posters, flyers and branding.</p>
+            <p>Logos, posters, flyers and professional branding.</p>
         </div>
 
-        <div class="card">
+        <div class="card service-content">
             <h3>🎬 Video Editing</h3>
-            <p>Creative video editing and multimedia production.</p>
+            <p>Creative video editing and promotional production.</p>
         </div>
 
-        <div class="card">
+        <div class="card service-content">
             <h3>💻 Web Development</h3>
-            <p>Modern, responsive and professional websites.</p>
+            <p>Modern and responsive websites.</p>
         </div>
 
-        <div class="card">
+        <div class="card service-content">
             <h3>📱 App Development</h3>
             <p>Innovative mobile and web applications.</p>
         </div>
 
-        <div class="card">
+        <div class="card service-content">
             <h3>📢 Digital Marketing</h3>
-            <p>Digital strategies that help businesses grow.</p>
+            <p>Digital marketing and business promotion.</p>
         </div>
 
-        <div class="card">
+        <div class="card service-content">
             <h3>✨ Branding</h3>
             <p>Building memorable brand identities.</p>
         </div>
 
     </div>
-
 </section>
 
-<section id="projects">
+<section id="portfolio">
+    <h2 class="title">Our Creative Portfolio</h2>
 
-    <h2 class="title">Our Projects</h2>
+    <p style="color:#bbb;margin-bottom:30px">
+        Explore some of our creative work and digital projects.
+    </p>
 
-    <div class="projects">
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="video">Video Editing</button>
+    </div>
 
-        <div class="card">
-            <h3>Website Development</h3>
-            <p>Creative and professional website solutions.</p>
+    <div class="gallery">
+
+        <!-- GREATER LIFE DEVOTIONS -->
+        <div class="card project-card" data-category="graphic">
+            <a href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/20260917_112223.jpg" target="_blank">
+                <img src="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/20260917_112223.jpg"
+                alt="Greater Life Devotions book cover"
+                loading="lazy">
+            </a>
+            <div class="project-info">
+                <h3>Greater Life Devotions</h3>
+                <p>Book cover and promotional graphic design.</p>
+                <a class="project-link" href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/20260917_112223.jpg" target="_blank">View Design ↗</a>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Graphic Design</h3>
-            <p>Visual designs that communicate powerful ideas.</p>
+        <!-- RESTAURANT POSTER -->
+        <div class="card project-card" data-category="graphic">
+            <a href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/IMG-20261106-WA8001.jpg" target="_blank">
+                <img src="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/IMG-20261106-WA8001.jpg"
+                alt="Kips Restaurant advertising design"
+                loading="lazy">
+            </a>
+            <div class="project-info">
+                <h3>Kips Restaurant Advertisement</h3>
+                <p>Restaurant promotional poster and advertising design.</p>
+                <a class="project-link" href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/IMG-20261106-WA8001.jpg" target="_blank">View Design ↗</a>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Digital Solutions</h3>
-            <p>Technology-driven projects and applications.</p>
+        <!-- SMARTWATCH ADVERTISEMENT -->
+        <div class="card project-card" data-category="graphic">
+            <a href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/IMG-20261107-WA5050.jpg" target="_blank">
+                <img src="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/IMG-20261107-WA5050.jpg"
+                alt="Smartwatch advertising design"
+                loading="lazy">
+            </a>
+            <div class="project-info">
+                <h3>Smartwatch Advertisement</h3>
+                <p>Product advertising and promotional graphic.</p>
+                <a class="project-link" href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/IMG-20261107-WA5050.jpg" target="_blank">View Design ↗</a>
+            </div>
+        </div>
+
+        <!-- JHI DIGITAL MART -->
+        <div class="card project-card" data-category="web">
+            <a href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/Screenshot_20260918-173824.png" target="_blank">
+                <img src="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/Screenshot_20260918-173824.png"
+                alt="JHI Digital Mart website screenshot"
+                loading="lazy">
+            </a>
+            <div class="project-info">
+                <h3>JHI Digital Mart</h3>
+                <p>Digital marketplace website project.</p>
+                <a class="project-link" href="https://jonathanisaiah49-ctrl.github.io/" target="_blank">View Website ↗</a>
+            </div>
+        </div>
+
+        <!-- JHI ONLINE SCHOOL -->
+        <div class="card project-card" data-category="web">
+            <a href="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/Screenshot_20261112-073943.png" target="_blank">
+                <img src="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/Screenshot_20261112-073943.png"
+                alt="JHI Online School website screenshot"
+                loading="lazy">
+            </a>
+            <div class="project-info">
+                <h3>JHI Online School</h3>
+                <p>Online learning platform website project.</p>
+                <a class="project-link" href="https://jonathanisaiah49-ctrl.github.io/" target="_blank">View Website ↗</a>
+            </div>
+        </div>
+
+        <!-- VIDEO -->
+        <div class="card project-card" data-category="video">
+            <video controls preload="metadata">
+                <source src="https://raw.githubusercontent.com/jonathanisaiah49-ctrl/COMZ-Multimedia-/main/d507a4eb-e728-4c98-a30f-f070d760c4cc-watermark.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <div class="project-info">
+                <h3>Video Production</h3>
+                <p>Video editing and multimedia sample.</p>
+            </div>
         </div>
 
     </div>
-
 </section>
 
 <section class="contact" id="contact">
-
     <h2 class="title">Let's Work Together</h2>
 
-    <p>Have a project or an idea? We would love to hear from you.</p>
-
+    <p>Have a project or idea? Let's bring it to life.</p>
     <p>Email: comzmultimedia@gmail.com</p>
-
     <p>WhatsApp: +265 884 388 803</p>
 
     <div class="buttons">
-
-        <a class="btn gold-btn"
+        <a class="btn gold"
         href="https://wa.me/265884388803">
-        Chat With Us
+            Chat With Us
         </a>
 
-        <a class="btn outline-btn"
-        href="https://wa.me/265884388803?text=I%20would%20like%20a%20quotation.">
-        Request a Quote
+        <a class="btn outline"
+        href="https://wa.me/265884388803?text=Hello%20COMZ%20Multimedia%2C%20I%20would%20like%20a%20quotation.">
+            Request a Quote
         </a>
-
     </div>
-
 </section>
 
-</main>
-
 <footer>
-
     <p>© 2026 COMZ Multimedia. All Rights Reserved.</p>
-
     <p>Citizens of Mount Zion | Creativity Without Limits.</p>
-
 </footer>
 
-<a class="whatsapp-float"
+<a class="whatsapp"
 href="https://wa.me/265884388803"
-target="_blank">
-WhatsApp Us
-</a>
+target="_blank">WhatsApp Us</a>
 
 <script>
-
 function toggleMenu() {
-    document.getElementById("navigation").classList.toggle("active");
+    document.getElementById("nav").classList.toggle("active");
 }
 
 function closeMenu() {
-    document.getElementById("navigation").classList.remove("active");
+    document.getElementById("nav").classList.remove("active");
 }
 
+// Portfolio category filters
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.filter;
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        projects.forEach(project => {
+            const matches =
+                category === "all" ||
+                project.dataset.category === category;
+
+            project.classList.toggle("hidden", !matches);
+        });
+    });
+});
 </script>
 
 </body>
